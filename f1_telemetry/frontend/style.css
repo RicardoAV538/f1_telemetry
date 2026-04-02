@@ -546,3 +546,54 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 14px;
 }
+
+/* ── Draggable column headers ── */
+.engineering-table th[draggable="true"] {
+  cursor: grab;
+  user-select: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.engineering-table th[draggable="true"]:hover {
+  background: #1a2235;
+}
+
+.engineering-table th.col-dragging {
+  opacity: 0.4;
+  cursor: grabbing;
+}
+
+.engineering-table th.col-drag-over {
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 35, 50, 0.12);
+}
+
+/* ── Panel title row with reset button ── */
+.panel-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.panel-title-row .panel-title {
+  margin-bottom: 0;
+}
+
+.reset-columns-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #131a27;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.reset-columns-btn:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}

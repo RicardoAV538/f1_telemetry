@@ -25,34 +25,14 @@
     <div class="race-alert" id="race-alert">Bandeira Verde</div>
 
     <div class="panel full-width">
-      <div class="panel-title">Engineering Timing Board</div>
+      <div class="panel-title-row">
+        <div class="panel-title">Engineering Timing Board</div>
+        <button class="reset-columns-btn" id="reset-columns" title="Reset column order to default">Reset Columns</button>
+      </div>
       <div class="table-wrap">
         <table class="engineering-table">
           <thead>
-            <tr>
-                <th>Pos</th>
-                <th>#</th>
-                <th>Driver</th>
-                <th>Team</th>
-                <th>Tyre</th>
-                <th>Lap</th>
-                <th>Ahead</th>
-                <th>Leader</th>
-                <th>S1</th>
-                <th>S2</th>
-                <th>S3</th>
-                <th>Current</th>
-                <th>Last</th>
-                <th>Pits</th>
-                <th>FL</th>
-                <th>FR</th>
-                <th>RL</th>
-                <th>RR</th>
-                <th>ERS Mode</th>
-                <th>ERS %</th>
-                <th>DRS</th>
-                <th>Status</th>
-            </tr>
+            <tr id="engineering-grid-head"></tr>
           </thead>
           <tbody id="engineering-grid-body"></tbody>
         </table>
