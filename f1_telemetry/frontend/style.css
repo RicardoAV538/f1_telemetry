@@ -80,6 +80,17 @@ h1 {
   font-size: 13px;
 }
 
+.game-version {
+  padding: 6px 12px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: rgba(255, 35, 50, 0.1);
+}
+
 .tabs {
   display: flex;
   gap: 10px;

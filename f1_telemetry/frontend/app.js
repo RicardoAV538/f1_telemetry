@@ -1,5 +1,6 @@
 const connectionPill = document.getElementById("connection-pill");
 const updatedAtEl = document.getElementById("updated-at");
+const gameVersionEl = document.getElementById("game-version");
 
 const speedEl = document.getElementById("speed");
 const gearEl = document.getElementById("gear");
@@ -111,6 +112,9 @@ function render(data) {
   connectionPill.textContent = meta?.connected ? "LIVE" : "OFFLINE";
   connectionPill.classList.toggle("live", !!meta?.connected);
   updatedAtEl.textContent = `Updated ${formatUpdatedAt(meta?.updated_at)}`;
+  if (gameVersionEl) {
+    gameVersionEl.textContent = meta?.game_version ?? "-";
+  }
 
   speedEl.textContent = car?.speed_kph ?? 0;
   gearEl.textContent = car?.gear ?? "N";

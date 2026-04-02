@@ -108,6 +108,9 @@ ws.onmessage = (event) => {
     updatedAtEl.textContent = `Updated ${formatUpdatedAt(data.meta?.updated_at)}`;
   }
 
+  const gv = document.getElementById("game-version");
+  if (gv) gv.textContent = data.meta?.game_version ?? "-";
+
   setRaceAlert(data.race_control);
   renderRows(data.live_grid, data.driver?.name);
 };
