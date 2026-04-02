@@ -90,6 +90,13 @@ def rebuild_live_grid():
     rows = []
 
     for idx, participant in participants_snapshot.items():
+        # Skip empty/placeholder participant slots (e.g. F1 2020 sends 22
+        # slots but only 20 are real drivers; the blanks default to team 0
+        # which maps to Mercedes, creating phantom entries).
+        name = participant.get("name", "")
+        if not name or not name.strip():
+            continue
+
         lap = lap_snapshot.get(idx, {})
         tel = telemetry_snapshot.get(idx, {})
         status = status_snapshot.get(idx, {})
