@@ -2,7 +2,8 @@ race_state = {
     "meta": {
         "connected": False,
         "updated_at": None,
-        "packet_type": None
+        "packet_type": None,
+        "game_version": "-"
     },
     "race_control": {
         "status": "CLEAR",

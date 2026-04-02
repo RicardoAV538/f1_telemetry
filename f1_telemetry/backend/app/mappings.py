@@ -24,6 +24,13 @@ TRACKS = {
     22: "Silverstone Short",
     23: "Austin Short",
     24: "Suzuka Short",
+    # F1 2020 additions
+    25: "Hanoi",
+    26: "Zandvoort",
+    # F1 2021 additions
+    27: "Imola",
+    28: "Portimao",
+    29: "Jeddah",
 }
 
 TEAMS = {
@@ -37,6 +44,32 @@ TEAMS = {
     7: "Haas",
     8: "McLaren",
     9: "Alfa Romeo",
+    # F1 2020 additions
+    41: "MP Motorsport",
+    42: "Prema",
+    43: "Uni-Virtuosi",
+    44: "Carlin",
+    45: "Charouz",
+    46: "Dams",
+    47: "Campos",
+    48: "BWT",
+    49: "Trident",
+    50: "Hitech",
+    85: "Mercedes 2020",
+    86: "Ferrari 2020",
+    87: "Red Bull 2020",
+    88: "Williams 2020",
+    89: "Racing Point 2020",
+    90: "Renault 2020",
+    91: "Alpha Tauri",
+    92: "Haas 2020",
+    93: "McLaren 2020",
+    94: "Alfa Romeo 2020",
+    # F1 2021 teams
+    95: "Aston Martin",
+    96: "Alpine",
+    # My Team (F1 2020 & 2021)
+    255: "My Team",
 }
 
 WEATHER = {
@@ -82,6 +115,7 @@ SAFETY_CAR = {
     0: "None",
     1: "Full Safety Car",
     2: "Virtual Safety Car",
+    3: "Formation Lap",  # F1 2020+
 }
 
 ERS_MODE = {
@@ -143,4 +177,15 @@ EVENT_CODES = {
     "LGOT": "Lights out",
     "DTSV": "Drive through served",
     "SGSV": "Stop-go served",
+    # F1 2021 additions
+    "BUTN": "Button status",
+    "FLBK": "Flashback",
+    "RDFL": "Red flag",
+    "OVTK": "Overtake",
+}
+
+GAME_VERSION_LABEL = {
+    2019: "F1 2019",
+    2020: "F1 2020",
+    2021: "F1 2021",
 }
