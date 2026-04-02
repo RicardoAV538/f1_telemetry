@@ -158,7 +158,8 @@ function onDrop(e) {
   if (dragSrcIdx === null || dragSrcIdx === targetIdx) return;
 
   const moved = columnOrder.splice(dragSrcIdx, 1)[0];
-  columnOrder.splice(targetIdx, 0, moved);
+  const adjustedTarget = dragSrcIdx < targetIdx ? targetIdx - 1 : targetIdx;
+  columnOrder.splice(adjustedTarget, 0, moved);
   saveColumnOrder(columnOrder);
   renderHeader();
   if (lastRows !== null) renderRows(lastRows, lastDriverName);
