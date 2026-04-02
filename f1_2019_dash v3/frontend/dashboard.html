@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Race Engineer - Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">Race Control</div>
+        <h1>Driver Dashboard</h1>
+      </div>
+      <div class="topbar-right">
+        <a class="nav-link" href="/grid" target="_blank">Open Live Grid</a>
+        <div class="status-pill" id="connection-pill">OFFLINE</div>
+        <div class="updated-at" id="updated-at">--</div>
+      </div>
+    </header>
+
+    <div class="race-alert" id="race-alert">Green Flag</div>
+
+    <main class="dashboard">
+      <section class="panel hero-panel">
+        <div class="hero-main">
+          <div class="metric-block speed-block">
+            <span class="metric-label">Speed</span>
+            <span class="metric-value" id="speed">0</span>
+            <span class="metric-unit">km/h</span>
+          </div>
+          <div class="metric-block gear-block">
+            <span class="metric-label">Gear</span>
+            <span class="metric-value" id="gear">N</span>
+          </div>
+        </div>
+
+        <div class="hero-side">
+          <div class="mini-kpi"><span>RPM</span><strong id="rpm">0</strong></div>
+          <div class="mini-kpi"><span>Throttle</span><div class="telemetry-bar"><div class="telemetry-fill throttle-fill" id="throttle-bar"></div></div></div>
+          <div class="mini-kpi"><span>Brake</span><div class="telemetry-bar"><div class="telemetry-fill brake-fill" id="brake-bar"></div></div></div>
+          <div class="mini-kpi"><span>DRS</span><strong id="drs">OFF</strong></div>
+        </div>
+      </section>
+
+      <section class="panel"><div class="panel-title">Session</div><div class="data-grid" id="session-grid"></div></section>
+      <section class="panel"><div class="panel-title">Driver</div><div class="data-grid" id="driver-grid"></div></section>
+      <section class="panel"><div class="panel-title">Lap Timing</div><div class="data-grid" id="lap-grid"></div></section>
+      <section class="panel"><div class="panel-title">Car Systems</div><div class="data-grid" id="car-grid"></div></section>
+
+      <section class="panel tyre-panel">
+        <div class="panel-title">Tyres</div>
+        <div class="tyre-layout">
+          <div class="tyre-card"><span>FL</span><strong id="tyre-fl">0%</strong></div>
+          <div class="tyre-card"><span>FR</span><strong id="tyre-fr">0%</strong></div>
+          <div class="tyre-card"><span>RL</span><strong id="tyre-rl">0%</strong></div>
+          <div class="tyre-card"><span>RR</span><strong id="tyre-rr">0%</strong></div>
+        </div>
+        <div class="data-grid compact" id="tyres-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">Energy</div>
+        <div class="bar-group">
+          <div>
+            <div class="bar-label">Fuel</div>
+            <div class="bar"><div class="bar-fill fuel" id="fuel-bar"></div></div>
+          </div>
+          <div>
+            <div class="bar-label">ERS</div>
+            <div class="bar"><div class="bar-fill ers" id="ers-bar"></div></div>
+          </div>
+        </div>
+        <div class="data-grid compact" id="energy-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">Damage & Flags</div>
+        <div class="data-grid compact" id="damage-grid"></div>
+      </section>
+
+      <section class="panel full-width">
+        <div class="panel-title">Events Feed</div>
+        <ul class="events-list" id="events"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>

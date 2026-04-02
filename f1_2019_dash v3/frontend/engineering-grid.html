@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Race Engineer - Engineering Grid</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app-shell engineer-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">Race Control</div>
+        <h1>Engineering Grid</h1>
+      </div>
+      <div class="topbar-right">
+        <a class="nav-link" href="/dashboard" target="_blank">Dashboard</a>
+        <a class="nav-link" href="/grid" target="_blank">Live Grid</a>
+        <div class="status-pill" id="connection-pill">OFFLINE</div>
+        <div class="updated-at" id="updated-at">--</div>
+      </div>
+    </header>
+
+    <div class="race-alert" id="race-alert">Bandeira Verde</div>
+
+    <div class="panel full-width">
+      <div class="panel-title">Engineering Timing Board</div>
+      <div class="table-wrap">
+        <table class="engineering-table">
+          <thead>
+            <tr>
+                <th>Pos</th>
+                <th>#</th>
+                <th>Driver</th>
+                <th>Team</th>
+                <th>Tyre</th>
+                <th>Lap</th>
+                <th>Ahead</th>
+                <th>Leader</th>
+                <th>S1</th>
+                <th>S2</th>
+                <th>S3</th>
+                <th>Current</th>
+                <th>Last</th>
+                <th>Pits</th>
+                <th>FL</th>
+                <th>FR</th>
+                <th>RL</th>
+                <th>RR</th>
+                <th>ERS Mode</th>
+                <th>ERS %</th>
+                <th>DRS</th>
+                <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="engineering-grid-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/engineering-grid.js?v=1"></script>
+</body>
+</html>

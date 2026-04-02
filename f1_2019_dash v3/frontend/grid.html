@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Race Engineer - Live Grid</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">Race Control</div>
+        <h1>Live Grid</h1>
+      </div>
+      <div class="topbar-right">
+        <a class="nav-link" href="/dashboard" target="_blank">Open Dashboard</a>
+        <div class="status-pill" id="connection-pill">OFFLINE</div>
+        <div class="updated-at" id="updated-at">--</div>
+      </div>
+    </header>
+
+    <div class="race-alert" id="race-alert">Green Flag</div>
+
+    <div class="panel full-width">
+      <div class="panel-title">Live Grid</div>
+      <div class="table-wrap">
+        <table class="grid-table">
+          <thead>
+            <tr>
+              <th>Pos</th>
+              <th>#</th>
+              <th>Driver</th>
+              <th>Team</th>
+              <th>Tyre</th>
+              <th>Lap</th>
+              <th>Gap</th>
+              <th>Pits</th>
+              <th>Last Lap</th>
+              <th>ERS</th>
+              <th>Sector</th>
+              <th>Status</th>
+              <th>Speed</th>
+            </tr>
+          </thead>
+          <tbody id="grid-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/grid.js"></script>
+</body>
+</html>
